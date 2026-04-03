@@ -1,0 +1,86 @@
+:root {
+  color-scheme: dark;
+  --bg: #07080a;
+  --bg-secondary: #0d1014;
+  --panel-bg: rgba(16, 18, 22, 0.72);
+  --border-soft: rgba(255, 255, 255, 0.07);
+  --text: #f5f7fa;
+  --muted-strong: rgba(223, 229, 237, 0.88);
+  --muted: rgba(186, 194, 205, 0.64);
+  --panel-shadow:
+    0 32px 70px rgba(0, 0, 0, 0.36),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  --font-body:
+    'SF Pro Text',
+    'SF Pro Display',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  --font-heading:
+    'SF Pro Display',
+    'SF Pro Text',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-synthesis: none;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable both-edges;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(135, 169, 196, 0.08), transparent 26%),
+    radial-gradient(circle at 80% 18%, rgba(255, 255, 255, 0.05), transparent 16%),
+    linear-gradient(180deg, var(--bg) 0%, var(--bg-secondary) 100%);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, transparent 0, rgba(255, 255, 255, 0.025) 50%, transparent 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 38%);
+  mask:
+    radial-gradient(circle at center, rgba(0, 0, 0, 0.7), transparent 72%),
+    linear-gradient(#000, #000);
+  opacity: 0.26;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
